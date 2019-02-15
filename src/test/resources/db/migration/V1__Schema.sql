@@ -1,1 +1,1 @@
-create table employee (employee_id VARCHAR , employee_name VARCHAR);
+create table employee (employee_id VARCHAR , employee_name VARCHAR, employee_address VARCHAR );
