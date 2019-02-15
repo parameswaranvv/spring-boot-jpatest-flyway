@@ -1,0 +1,1 @@
+create table employee (employee_id VARCHAR , employee_name VARCHAR);
