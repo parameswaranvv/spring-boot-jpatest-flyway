@@ -7,7 +7,7 @@ import org.hibernate.annotations.Type;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee")
+@Table(name = "employee", schema = "test")
 public class Employee extends BaseEntity{
 
     @Id

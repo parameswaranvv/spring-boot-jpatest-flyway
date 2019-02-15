@@ -4,7 +4,3 @@ spring:
     name: spring-boot-datajpatest-flyway
   flyway:
     enabled: false
-
-logging:
-  level:
-    root: debug

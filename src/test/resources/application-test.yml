@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: info
+    org:
+      hibernate:
+        type: trace
+spring:
+  flyway:
+    locations:
+      - classpath:db/test/migration
+    check-location: false
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true

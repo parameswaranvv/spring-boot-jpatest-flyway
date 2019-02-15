@@ -13,6 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @Slf4j
+@ActiveProfiles("test")
 public class EmployeeRepositoryTest {
 
     @Autowired
@@ -29,7 +30,7 @@ public class EmployeeRepositoryTest {
         employeeAddress.setZipCode("52525");
         employee.setEmployeeAddress(employeeAddress);
         employeeRepository.save(employee);
-        log.info("Employee Record from Database: {}", employeeRepository.findAllByEmployeeName("some-employee-name"));
+        log.info("Employee Record from Database: {}", employeeRepository.findAllByEmployeeName("some-employee-name").get(0));
         assertThat(employeeRepository.findAllByEmployeeName("some-employee-name").get(0)).isEqualTo(employee);
     }
 
